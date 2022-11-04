@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { CreateBrandsUseCase } from "./CreateBrandsUseCase";
 
-
 export class CreateBrandsController {
     async handle(request: Request, response: Response) {
         const { name, description } = request.body;

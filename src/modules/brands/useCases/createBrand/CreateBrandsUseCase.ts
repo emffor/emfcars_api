@@ -11,6 +11,7 @@ export class CreateBrandsUseCase {
         const brandExists = await prisma.brands.findFirst({
             where: {
                 name: {
+                    equals: name,
                     mode: "insensitive",
                 }
             }

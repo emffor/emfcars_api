@@ -29,15 +29,16 @@ model Brands {
 }
 
 model Cars {
-  id              String         @id @default(uuid())
-  color           String
-  model           String
-  creation_year   Int
-  model_year      Int
-  Transmissions   Transmissions? @relation(fields: [transmissionsId], references: [id])
-  transmissionsId String?
-  Brands          Brands?        @relation(fields: [brandsId], references: [id])
-  brandsId        String?
+  id    String @id @default(uuid())
+  model String
+  color String
+
+  creation_year  Int
+  model_year     Int
+  Transmissions  Transmissions? @relation(fields: [transmissionId], references: [id])
+  transmissionId String?
+  Brands         Brands?        @relation(fields: [brandId], references: [id])
+  brandId        String?
 
   @@map("cars")
 }

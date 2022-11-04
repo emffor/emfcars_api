@@ -1,6 +1,6 @@
 import { prisma } from "../../../../database/prismaClients";
 
-interface ICreateTransmission {
+export interface ICreateTransmission {
     name: string;
     description: string;
 }
@@ -11,6 +11,7 @@ export class CreateTransmissionUseCase {
         const transmissionExists = await prisma.transmissions.findFirst({
             where: {
                 name: {
+                    equals: name,
                     mode: "insensitive",
                 }
             }
