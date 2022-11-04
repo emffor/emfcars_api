@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { CreateBrandsController } from "./modules/brands/useCases/createBrand/CreateBrandsController";
+import { FindAllBrandController } from "./modules/brands/useCases/findAllBrand/FindAllBrandController";
 import { FindBrandsController } from "./modules/brands/useCases/findBrand/FindBrandsController";
 import { UpdateBrandsController } from "./modules/brands/useCases/updateBrand/UpdateBrandsController";
 import { UpdateBrandsUseCase } from "./modules/brands/useCases/updateBrand/UpdateBrandsUseCase";
@@ -22,6 +23,7 @@ const updateTransmissionController = new UpdateTransmissionsController();
 
 const createBrandsController = new CreateBrandsController();
 const findBrandsController = new FindBrandsController();
+const findAllBrandController = new FindAllBrandController();
 const updateBrandsController = new UpdateBrandsController();
 
 const createCarsController = new CreateCarsController();
@@ -35,6 +37,7 @@ routes.put("/transmissions/:id", updateTransmissionController.handle);
 
 routes.post("/brands/", createBrandsController.handle);
 routes.get("/brands/", findBrandsController.handle);
+routes.get("/brands/cars", findAllBrandController.handle);
 routes.put("/brands/:id", updateBrandsController.handle);
 
 routes.post("/cars/", createCarsController.handle);
