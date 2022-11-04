@@ -5,6 +5,7 @@ import { UpdateBrandsController } from "./modules/brands/useCases/updateBrand/Up
 import { UpdateBrandsUseCase } from "./modules/brands/useCases/updateBrand/UpdateBrandsUseCase";
 import { CreateCarsController } from "./modules/cars/useCases/createCars/CreateCarsController";
 import { FindCarsController } from "./modules/cars/useCases/findCars/FindCarsController";
+import { UpdateCarsController } from "./modules/cars/useCases/updateCars/UpdateCarsController";
 import { CreateTransmissionController } from "./modules/transmissions/useCases/createTransmission/CreateTransmissionController";
 import { FindTransmissionController } from "./modules/transmissions/useCases/findTransmission/findTransmission";
 import { UpdateTransmissionsController } from "./modules/transmissions/useCases/updateTransmission/UpdateTransmissionsController";
@@ -23,6 +24,7 @@ const updateBrandsController = new UpdateBrandsController();
 
 const createCarsController = new CreateCarsController();
 const findCarsController = new FindCarsController();
+const updateCarsController = new UpdateCarsController();
 
 routes.post("/transmissions/", createTransmissionController.handle);
 routes.get("/transmissions/", findTransmissionController.handle);
@@ -34,5 +36,6 @@ routes.put("/brands/:id", updateBrandsController.handle);
 
 routes.post("/cars/", createCarsController.handle);
 routes.get("/cars/", findCarsController.handle);
+routes.put("/cars/:id", updateCarsController.handle);
 
 export { routes };

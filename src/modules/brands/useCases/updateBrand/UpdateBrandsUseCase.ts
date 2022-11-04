@@ -19,7 +19,5 @@ export class UpdateBrandsUseCase {
         });
 
         return brand;
-
-
     }
 }
