@@ -4,17 +4,22 @@ import { FindBrandsController } from "./modules/brands/useCases/findBrand/FindBr
 import { CreateCarsController } from "./modules/cars/useCases/createCars/CreateCarsController";
 import { FindCarsController } from "./modules/cars/useCases/findCars/FindCarsController";
 import { CreateTransmissionController } from "./modules/transmissions/useCases/createTransmission/CreateTransmissionController";
+import { FindTransmissionController } from "./modules/transmissions/useCases/findTrasmission/FindTransmissionController";
 
 
 const routes = Router();
 
 const createTransmissionController = new CreateTransmissionController();
+const findTransmissionController = new FindTransmissionController();
+
 const createBrandsController = new CreateBrandsController();
 const findBrandsController = new FindBrandsController();
+
 const createCarsController = new CreateCarsController();
 const findCarsController = new FindCarsController();
 
 routes.post("/transmissions/", createTransmissionController.handle);
+routes.get("/transmissions/", findTransmissionController.handle);
 
 routes.post("/brands/", createBrandsController.handle);
 routes.get("/brands/", findBrandsController.handle);
