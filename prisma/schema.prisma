@@ -10,32 +10,34 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Transmisson {
-  id   String @id @default(uuid())
-  name String @unique
-  Cars Cars[]
+model Transmissions {
+  id          String @id @default(uuid())
+  name        String @unique
+  description String
+  Cars        Cars[]
 
   @@map("transmissions")
 }
 
 model Brands {
-  id   String @id @default(uuid())
-  name String @unique
-  Cars Cars[]
+  id          String @id @default(uuid())
+  name        String @unique
+  description String
+  Cars        Cars[]
 
   @@map("brands")
 }
 
 model Cars {
-  id            String       @id @default(uuid())
-  color         String
-  model         String
-  creation_year Int
-  model_year    Int
-  Transmisson   Transmisson? @relation(fields: [transmissonId], references: [id])
-  transmissonId String?
-  Brands        Brands?      @relation(fields: [brandsId], references: [id])
-  brandsId      String?
+  id              String         @id @default(uuid())
+  color           String
+  model           String
+  creation_year   Int
+  model_year      Int
+  Transmissions   Transmissions? @relation(fields: [transmissionsId], references: [id])
+  transmissionsId String?
+  Brands          Brands?        @relation(fields: [brandsId], references: [id])
+  brandsId        String?
 
   @@map("cars")
 }
