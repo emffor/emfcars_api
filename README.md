@@ -33,22 +33,30 @@ $ git clone https://github.com/emffor/emfcars_api
 # Entre no repositório:
 $ cd emfcars_api
 
-# Instale as dependências:
+# IMPORTANTE: Instale as dependências:
 $ yarn
 
-# Instanciar o Docker com Docker-Compose para subir o container e iniciar a aplicação:
+# IMPORTANTE: Instanciar o Docker com Docker-Compose para subir o container e iniciar a aplicação:
 $ docker-compose up
 
-# Criar a estrutura de tabelas :
+# IMPORTANTE: Criar a estrutura de tabelas (Caso não criar não funcionará):
 $ yarn prisma migrate dev
 
-# Para rodar a aplicação:
+# IMPORTANTE: Para rodar a aplicação:
 $ yarn dev
 
 # Para rodar o Prisma Studio caso deseje ver os dados do banco de dado.
 $ yarn prisma studio
 
 # Observação
-**Rode o banco no beekeepers se não vai dar error.**
+Rode o banco no beekeepers ou de preferência se não vai dar error.
+
+# Dados do banco para acessar o beekeepers ou de preferência
+- Connection type: PostgreSQL
+- Host: localhost
+- Port: 5432
+- User: admin
+- Password: admin
+- Default Database: emfcars_database
 
 ```
