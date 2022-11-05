@@ -14,16 +14,6 @@ services:
     volumes:
       - pgdata:/data/postgres
 
-  app:
-    build: .
-    container_name: app_emfcars_api
-    volumes:
-      - .:/usr/app
-    depends_on:
-      - emfcars_database
-    networks:
-      - emfcars_database
-
 volumes:
   pgdata:
     driver: local
