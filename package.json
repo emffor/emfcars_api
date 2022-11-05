@@ -2,6 +2,8 @@
   "name": "emfcars_api",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/emffor/emfcars_api",
+  "author": "Eloan Ferreira <eloanmf@hotmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
