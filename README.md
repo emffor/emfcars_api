@@ -22,7 +22,7 @@ API emfcars é um projeto do teste READI.docpronto o qual teve como objetivos:
 - [Yarn](https://yarnpkg.com/)
 - [Docker-com-Docker-Compose](https://jolly-helenium-84a.notion.site/Instalar-Docker-e-Docker-Compose-4b89ba48d1a947089916c7e170caa374)
 - [Beekeeper](https://www.beekeeperstudio.io/)
-- [Insomnia](https://insomnia.rest/)
+- [Insomnia](https://insomnia.rest/) - ARQUIVO DO INSOMNIA.JSON NO REPOSITÓRIO(DOC)
 
 # Instalar database
 
@@ -49,7 +49,7 @@ $ yarn dev
 $ yarn prisma studio
 
 # Observação
-Rode o banco no beekeepers ou de preferência se não vai dar error.
+Rode o banco no beekeepers ou de preferência, se não pode ser que possa algum dar erro.
 
 # Dados do banco para acessar o beekeepers ou de preferência
 - Connection type: PostgreSQL
